@@ -1,10 +1,10 @@
-import React from 'react'
-
+import React from 'react';
+import ItemForm from '../../components/Forms/ItemForm.jsx';
+import ShoppingList from '../../components/ShoppingList/ShoppingList.jsx';
 export default function Home() {
     return (
         <main>
-            <h1>This is the home component!</h1>
-            <h3>We will call all of the necessary compnents here.</h3>
+            <ShoppingList />            
         </main>
     )
 }

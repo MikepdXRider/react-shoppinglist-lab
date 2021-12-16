@@ -1,12 +1,22 @@
 import React from 'react'
+import ItemForm from '../Forms/ItemForm.jsx'
+
+// state initial values
+
+// reducer fn for useReducer hook
 
 export default function ShoppingList() {
+    // useReducer hook
+
+    // formsubmit handler
+
     return (
         <section>
+            {/* pass form submit handlers here */}
+            <ItemForm />
         <ul>
             <li>
-                <h1>This is the shopping list component!</h1>
-                <h3>This is where we'll map through the shopping list data array and render List items.</h3>
+                {/* Map data array and render listItems */}
             </li>
         </ul>
         </section>

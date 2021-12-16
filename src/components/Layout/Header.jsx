@@ -3,7 +3,7 @@ import React from 'react'
 export default function Footer() {
     return (
         <header>
-            <h1>This is the header component!</h1>
+            <h6>This is the header component!</h6>
         </header>
     )
 }

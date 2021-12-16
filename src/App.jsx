@@ -1,3 +1,12 @@
+import Layout from "./views/Layout/Layout.jsx";
+import Home from "./views/Home/Home.jsx";
+
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+      <div>
+        <Layout>
+          <Home />
+        </Layout>
+      </div>
+    )
 }
