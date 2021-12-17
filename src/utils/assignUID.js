@@ -1,4 +1,4 @@
-const uidDictionary = []
+const uidArr = []
 
 function generateRanNum () {
     return Math.round(Math.random() * 10000);
@@ -6,16 +6,16 @@ function generateRanNum () {
 
 export default function assignUID() {
     // assign random number to newNum variable.
-    let newNum = generateRanNum()
+    let newNum = generateRanNum();
 
     // while the newNum exists in the dictionary...
-    while (uidDictionary.includes(newNum)) {
+    while (uidArr.includes(newNum)) {
         // keep reassigning a random number to newNum..
         newNum = generateRanNum();
     }
 
     // place newNum in dictionary.
-    uidDictionary.push(newNum);
+    uidArr.push(newNum);
     // return newNum.
     return newNum;
 }

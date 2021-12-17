@@ -19,10 +19,19 @@ function reducer(state, action) {
             return [...state, action.payload]
         }
         case 'edit':{
+            // copy state
+            const newState = [...state];
+            // find the index of the array item with an id matching the payloads id.
+            const editIndex = newState.findIndex(item => item.id === action.payload.id);
+            // access the newState array using the editIndex from above to reassign the value of the items key/value pair.
+            newState[editIndex].item = action.payload.item;
+            // return the new state array once mutation is complete.
+            return newState;
+
             // delete the current version of the item
-            const filteredState = state.filter(item => item.id !== action.payload.id);
+            // const filteredState = state.filter(item => item.id !== action.payload.id);
             // add the new version of the item
-            return [...filteredState, action.payload];
+            // return [...filteredState, action.payload];
         }
         case 'delete':{
             return state.filter(item => item.id !== action.payload.id);
