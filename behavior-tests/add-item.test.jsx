@@ -5,7 +5,7 @@ import Home from "../src/views/Home/Home.jsx";
 
 
 
-it('adds a new item to the shopping list', async () => {
+it('adds a new item to the shopping list', () => {
     render(<Home />);
 
     const inputField = screen.getByLabelText(/New Item/i);
@@ -17,5 +17,5 @@ it('adds a new item to the shopping list', async () => {
     userEvent.type(inputField, 'Im totally stable in the head');
     userEvent.click(submitButton);
 
-    await waitFor(() => screen.getByText('Im totally stable in the head'));
+    screen.getByText('Im totally stable in the head')
 })

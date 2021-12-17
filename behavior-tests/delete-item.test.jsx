@@ -3,10 +3,10 @@ import userEvent from '@testing-library/user-event'
 import { waitFor } from "@testing-library/react";
 import Home from "../src/views/Home/Home.jsx";
 
-    // queryBy returns null if the element does not exist.
-    //  - this is great if we want test if an element is NOT rendering.
-    // getBy throws an error if the element does not exist.
-    //  - this is great if we only want to test if an element IS rendering. 
+// queryBy returns null if the element does not exist.
+//  - this is great if we want test if an element is NOT rendering.
+// getBy throws an error if the element does not exist.
+//  - this is great if we only want to test if an element IS rendering. 
 
 it('deletes an item from shopping list', async () => {
     render(<Home />);
@@ -15,7 +15,6 @@ it('deletes an item from shopping list', async () => {
     expect(milkItem).toBeInTheDocument();
 
     const deleteButton = screen.getByLabelText(/delete-milk/i);
-    expect(deleteButton).toBeInTheDocument();
 
     userEvent.click(deleteButton);
 

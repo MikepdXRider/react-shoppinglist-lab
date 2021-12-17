@@ -18,11 +18,9 @@ export default function EditItemForm({handleEdit, listItem, setIsEdit}) {
             <form onSubmit={(e) => handleSubmit(e)}>
                 <fieldset>
                     {/* <legend>Edit</legend> */}
-                    <label>
-                        Edit
-                        <input value={itemField} type="text" onChange={(e) => setItemField(e.target.value)} />
-                    </label>
-                    <button>Edit</button>
+                    <label htmlFor='edit-item'>edit Item: </label>
+                    <input id='edit-item' value={itemField} type="text" onChange={(e) => setItemField(e.target.value)} required/>
+                    <button aria-label='edit-item'>Add</button>
                 </fieldset>
             </form>
         </div>
