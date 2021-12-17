@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders home view component 1`] = `
+<div>
+  <main>
+    <section>
+      <div>
+        <form>
+          <fieldset>
+            <label
+              for="new-item"
+            >
+              New Item: 
+            </label>
+            <input
+              id="new-item"
+              required=""
+              type="text"
+              value=""
+            />
+            <button
+              aria-label="add-item"
+            >
+              Add
+            </button>
+          </fieldset>
+        </form>
+      </div>
+      <ul>
+        <li>
+          <article>
+            <h1>
+              Milk
+            </h1>
+            <button
+              aria-label="delete-Milk"
+            >
+              Delete
+            </button>
+            <button
+              aria-label="edit-Milk"
+            >
+              Edit
+            </button>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h1>
+              Burrito
+            </h1>
+            <button
+              aria-label="delete-Burrito"
+            >
+              Delete
+            </button>
+            <button
+              aria-label="edit-Burrito"
+            >
+              Edit
+            </button>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h1>
+              Pesto Sauce
+            </h1>
+            <button
+              aria-label="delete-Pesto Sauce"
+            >
+              Delete
+            </button>
+            <button
+              aria-label="edit-Pesto Sauce"
+            >
+              Edit
+            </button>
+          </article>
+        </li>
+      </ul>
+    </section>
+  </main>
+</div>
+`;

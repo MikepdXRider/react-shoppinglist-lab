@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders layout view component 1`] = `
+<div>
+  <div>
+    <header>
+      <p>
+        This is the header component!
+      </p>
+    </header>
+    <footer>
+      <p>
+        This is the footer component!
+      </p>
+    </footer>
+  </div>
+</div>
+`;
