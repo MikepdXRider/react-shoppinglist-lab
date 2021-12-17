@@ -1,5 +1,5 @@
 import Layout from "./Layout.jsx"
-import render from '@testing-library/react'
+import { render } from '@testing-library/react'
 
 
 it('renders layout view component', () => {
