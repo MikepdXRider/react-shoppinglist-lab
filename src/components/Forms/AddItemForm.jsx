@@ -18,7 +18,7 @@ export default function AddItemForm({addHandler}) {
                     {/* <legend>Add</legend> */}
                     <label htmlFor='new-item'>New Item: </label>
                     <input id='new-item' value={itemField} type="text" onChange={(e) => setItemField(e.target.value)} required/>
-                    <button aria-label='add-new-item'>Add</button>
+                    <button aria-label='add-item'>Add</button>
                 </fieldset>
             </form>
         </div>

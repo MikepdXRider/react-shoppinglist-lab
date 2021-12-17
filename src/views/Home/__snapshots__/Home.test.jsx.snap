@@ -19,7 +19,7 @@ exports[`renders home view component 1`] = `
               value=""
             />
             <button
-              aria-label="add-new-item"
+              aria-label="add-item"
             >
               Add
             </button>
@@ -32,10 +32,14 @@ exports[`renders home view component 1`] = `
             <h1>
               Milk
             </h1>
-            <button>
+            <button
+              aria-label="delete-Milk"
+            >
               Delete
             </button>
-            <button>
+            <button
+              aria-label="edit-Milk"
+            >
               Edit
             </button>
           </article>
@@ -45,10 +49,14 @@ exports[`renders home view component 1`] = `
             <h1>
               Burrito
             </h1>
-            <button>
+            <button
+              aria-label="delete-Burrito"
+            >
               Delete
             </button>
-            <button>
+            <button
+              aria-label="edit-Burrito"
+            >
               Edit
             </button>
           </article>
@@ -58,10 +66,14 @@ exports[`renders home view component 1`] = `
             <h1>
               Pesto Sauce
             </h1>
-            <button>
+            <button
+              aria-label="delete-Pesto Sauce"
+            >
               Delete
             </button>
-            <button>
+            <button
+              aria-label="edit-Pesto Sauce"
+            >
               Edit
             </button>
           </article>

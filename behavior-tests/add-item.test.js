@@ -9,7 +9,7 @@ it('adds a new item to the shopping list', async () => {
     render(<Home />);
 
     const inputField = screen.getByLabelText(/New Item/i);
-    const submitButton = screen.getByLabelText(/add-new-item/i);
+    const submitButton = screen.getByLabelText(/add-item/i);
 
     expect(inputField).toBeInTheDocument();
     expect(submitButton).toBeInTheDocument();
