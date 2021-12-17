@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders home view component 1`] = `
+<div>
+  <main>
+    <section>
+      <div>
+        <h1>
+          FORM!
+        </h1>
+        <form>
+          <fieldset>
+            <label>
+              Add
+              <input
+                type="text"
+                value=""
+              />
+            </label>
+            <button>
+              Add
+            </button>
+          </fieldset>
+        </form>
+      </div>
+      <ul>
+        <li>
+          <article>
+            <h1>
+              Milk
+            </h1>
+            <button>
+              Delete
+            </button>
+            <button>
+              Edit
+            </button>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h1>
+              Burrito
+            </h1>
+            <button>
+              Delete
+            </button>
+            <button>
+              Edit
+            </button>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h1>
+              Pesto Sauce
+            </h1>
+            <button>
+              Delete
+            </button>
+            <button>
+              Edit
+            </button>
+          </article>
+        </li>
+      </ul>
+    </section>
+  </main>
+</div>
+`;
