@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react'
 import assignUID from '../../utils/assignUID'
-import ItemForm from '../Forms/ItemForm.jsx'
+import AddItemForm from '../Forms/AddItemForm.jsx'
 import ListItem from '../ListItem/ListItem.jsx'
 
 
@@ -19,10 +19,13 @@ function reducer(state, action) {
             return [...state, action.payload]
         }
         case 'edit':{
-            // add new thing to state.
+            // delete the current version of the item
+            const filteredState = state.filter(item => item.id !== action.payload.id);
+            // add the new version of the item
+            return [...filteredState, action.payload];
         }
         case 'delete':{
-            // add new thing to state.
+            return state.filter(item => item.id !== action.payload.id);
         }
         default: {
             throw new Error(`No matching cases for ${action.type}`);
@@ -36,26 +39,43 @@ export default function ShoppingList() {
     const [shoppingList, dispatch] = useReducer(reducer, initialValue);
     
     function handleDelete(id) {         
-        dispatch({type: 'delete', id});
+        dispatch({
+            type: 'delete',
+            payload: {id}}
+            );
     }
 
     function handleAdd(item) {      
-        dispatch({type: 'add', payload: {item: item, id: assignUID()}});
+        dispatch({
+            type: 'add',
+            payload: {
+                item: item,
+                id: assignUID()
+            }
+        });
     }
 
-    function handleEdit(id, newObj) {         
-        dispatch({type: 'edit', id, item});
+    function handleEdit(id, item) {         
+        dispatch({
+            type: 'edit',
+            payload: {
+                id: id,
+                item: item
+            }
+        });
     }
 
     return (
         <section>
-            {/* pass form submit handlers here */}
-            <ItemForm handlerFn={handleAdd} />
+            <AddItemForm addHandler={handleAdd} />
         <ul>
-            {/* Map data array and render listItems */}
             {
                 shoppingList.map((listItem) => {
-                    return <li key={listItem.id}><ListItem listItem={listItem}/></li>
+                    return (
+                        <li key={listItem.id}>
+                            <ListItem listItem={listItem} handleDelete={handleDelete} handleEdit={handleEdit}/>
+                        </li>
+                    )
                 })
             }
         </ul>
