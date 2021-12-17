@@ -1,5 +1,5 @@
-import { render } from '@testing-library/react'
-import Home from "./Home.jsx"
+import { render } from '@testing-library/react';
+import Home from "./Home.jsx";
 
 
 it('renders home view component', () => {

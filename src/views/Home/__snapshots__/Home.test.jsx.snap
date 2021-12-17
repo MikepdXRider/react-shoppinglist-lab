@@ -5,19 +5,22 @@ exports[`renders home view component 1`] = `
   <main>
     <section>
       <div>
-        <h1>
-          FORM!
-        </h1>
         <form>
           <fieldset>
-            <label>
-              Add
-              <input
-                type="text"
-                value=""
-              />
+            <label
+              for="new-item"
+            >
+              New Item: 
             </label>
-            <button>
+            <input
+              id="new-item"
+              required=""
+              type="text"
+              value=""
+            />
+            <button
+              aria-label="add-new-item"
+            >
               Add
             </button>
           </fieldset>

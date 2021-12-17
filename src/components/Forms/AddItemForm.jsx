@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 
 
@@ -13,15 +13,12 @@ export default function AddItemForm({addHandler}) {
 
     return (
         <div>
-            <h1>FORM!</h1>
             <form onSubmit={(e) => handleSubmit(e)}>
                 <fieldset>
                     {/* <legend>Add</legend> */}
-                    <label>
-                    Add
-                    <input value={itemField} type="text" onChange={(e) => setItemField(e.target.value)} />
-                    </label>
-                    <button>Add</button>
+                    <label htmlFor='new-item'>New Item: </label>
+                    <input id='new-item' value={itemField} type="text" onChange={(e) => setItemField(e.target.value)} required/>
+                    <button aria-label='add-new-item'>Add</button>
                 </fieldset>
             </form>
         </div>

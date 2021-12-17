@@ -12,8 +12,8 @@ export default function ListItem({listItem, handleDelete, handleEdit}) {
                 ? <EditItemForm listItem={listItem} handleEdit={handleEdit} setIsEdit={setIsEdit}/>
                 : <>
                     <h1>{listItem.item}</h1>
-                    <button onClick={() => handleDelete(listItem.id)}>Delete</button>
-                    <button onClick={() => setIsEdit(prevState => !prevState)}>Edit</button>
+                    <button aria-label='delete-item'onClick={() => handleDelete(listItem.id)}>Delete</button>
+                    <button aria-label='edit-item'onClick={() => setIsEdit(prevState => !prevState)}>Edit</button>
                 </>
             }
         </article>
